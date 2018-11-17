@@ -84,8 +84,6 @@
     <!-- Experience Section -->
     <section id="experience" class="experience-section bg-black">
         <section class="lasp-section">
-
-
             <!-- Featured Project Row -->
               <div id="lasp" class="container text-center">
                   <div class="row">
@@ -198,7 +196,7 @@
                           <img src="img/proc-reader-2.png" style="width: 100%;"/>
                       </div>
                       <div class="col-lg-6 info">
-                          <h3 class="text-md-center">SORCE Automation Web</h3>
+                          <h3 class="text-md-center">SORCE Automation Visualization</h3>
                           <p class="text-white">SORCE is an incredibly complex spacecraft, as discussed in this
                           <a href="https://arc.aiaa.org/doi/pdf/10.2514/6.2018-2619">paper</a> by my colleagues. Every
                           orbit, all power draws that are not necessary to survival (and sometimes even those that are vital) are
@@ -229,8 +227,316 @@
                           <img src="img/plotcheck.png" style="width: 100%;"/>
                       </div>
                   </div>
+                  <div class="row">
+                      <div class="col-lg-8 mx-auto">
+                          <p class="text-white">
+                              After my two year obligation with LASP, I applied to be a graduate research assistant to
+                              continue my work at LASP while continuing with my schooling. This application included
+                              a <a href="files/Presentation_Hanley_Matthew.pdf">presentation</a> depicting some of the work
+                              I did at LASP, which I had to give to all the flight directors, my supervisor, and the
+                              department director. After my application and presentation, I was appointed to the position
+                              of Graduate Lead for the QuikSCAT Spacecraft.
+                          </p>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-lg-6">
+                          <h3 class="text-md-center">QuikSCAT Deoommissioning</h3>
+                          <p class="text-white">As the Graduate Lead of QuikSCAT, I played a large role in the
+                          <a href="https://www.jpl.nasa.gov/news/news.php?feature=7260">decommissioning</a>
+                          of the 19 year old spacecraft. I was able to attend all meetings discussing decommissioning
+                          plans between Ball Aerospace, LASP, JPL, CARA, NEN, and more. I took in depth notes to keep
+                          meetings productive and provided knowledge of the spacecraft and operations concept when
+                          needed. Using my in depth understanding of the decommissioning plan, I was able to manage
+                          both student employees and professionals in the decommissioning process. For example, I was
+                          able to train both student and professional controllers on the contingency operations that
+                          may have needed to be performed and also taught flight controllers about the planning process
+                          for the succession of burns that occurred to lower QuikSCAT's orbit.</p>
+
+                          <p class="text-white">One of my main duties during the actual decommissioning period was to provide
+                          ground stations with updated orbit information as quickly as possible. In order to passivate the
+                          spacecraft, we had to expend all the fuel to remove the pressure
+                          from the propulsion system and decrease the energy of the orbit as much as possible
+                          (QuikSCAT was built before the NASA regulation that any spacecraft put into orbit must be able
+                          to come out of orbit). To do this, we generated the concept of burn "clusters." A burn cluster
+                          consisted of three burns, each separated by one orbit (burning at perigee each time would lower
+                          the perigee such that the spacecraft would have more atmospheric drag and would thus reenter
+                          sooner). We did this a total of three times over the course of about two weeks, a very involved
+                          process. One large concern when burning to lower an orbit is that the ground stations must
+                          know when they should expect the spacecraft to arrive at the edge of their mask.
+                          We can of course predict this by assessing thruster efficiency and inputting the change of
+                          energy in the orbit into a tool like STK, but many assumptions must be made to do this and it
+                          showed to contain quite a bit of error. I was tasked with collecting real-time orbit information
+                          between burns (i.e. at a half orbit contact where the time bias wasn't too large for the station
+                          to acquire) and turning this into a future schedule for the ground stations. I did this
+                          by propegating (with HPOP propagator) the orbit based on point solution generated by QuikSCAT's
+                          onboard attitude determination algorithm. I then took this information to generate TLEs and
+                          then translated them to IIRVs in the format specified by the ground stations which were then
+                          sent over SFTP. This was just one of many tasks performed to help passivate the spacecraft. Not to mention,
+                          I had the privilege of sending the last command ever to the spacecraft! </p>
+                          <img src="img/decommissioning.jpg" style="width: 100%;"/>
+
+                      </div>
+                      <div class="col-lg-6">
+                          <h3 class="text-md-center">CSIM Development and Commissioning</h3>
+                          <p class="text-white">Another one of my tasks as a graduate student was to help with the ground
+                          segment of the <a href="http://lasp.colorado.edu/home/csim/?doing_wp_cron=1542489347.9603259563446044921875">CSIM</a>
+                          cubesat mission. This was (and still is) a very involved mission that had a lot of work that
+                          needed to be done in a short amount of time. Starting in August 2018 for a November 2018 launch,
+                          myself and a couple other students had to learn the ins and outs of the mission in order to begin
+                          development on the ground station. We read the ICD for the Blue Canyon XB1 bus from cover to
+                          cover multiple times. We spent as much time as possible connected to the flight instrument
+                          through hardline to learn all the idiosyncrasies and bugs. We developed commissioning procedures,
+                          weekly operations concepts, and contingency plans. As a low budget mission, student support
+                          for ops was key (because it's cheap), so we made nearly all the decisions related to the ground
+                          (and many for the flight) segment of the operations.</p>
+
+                          <p class="text-white">I was specifically in charge of the ground software. Internal to LASP, we
+                          have a lightweight command and control software that can be adapted for different missions. One
+                          of my first places of focus was configuring this software to work with our mission. I quickly
+                          became an expert with the software and was able to quickly troubleshoot any bugs.</p>
+
+                          <p class="text-white">Interfacing with the spacecraft through this realtime command software
+                          was great, but an operations team also needs (very much so) to be able to analyze historic
+                          data. In order to do this, I had to quickly learn about space communication protocols such as
+                          CCSDS and AX.25. I then built a <a href="https://github.com/matthewdhanley/cube-ds">program</a>
+                          that can take in raw, binary data from the flight unit,
+                          find and interpret the packets within the data, then store it for future retrieval. But in order
+                          to do this, I had to be able to interface with existing tools available at LASP. This meant that
+                          I had to abandon concepts that I was familiar with (such as SQL and flat JSON files) and adopt
+                          tools such as NetCDF. I successfully built a data pipeline that flowed data from the spacecraft,
+                          through the ground antenna, and finally to a file that was hosted on a server that could be
+                          accessed by a multitude of different plotting and analysis tools.</p>
+
+                          <p class="text-white">Another important task that I had with this project was refactoring a
+                          <a href="https://github.com/matthewdhanley/CSIM_Beacon_Decoder">beacon decoder</a>, originally written for the
+                          <a href="http://lasp.colorado.edu/home/minxss/">MinXSS</a> spacecraft. This tool allows amateur
+                          HAM radio operators to track the spacecraft and collect beacons from our radio, then transfer data
+                          back to the team. Although we can get back orbit data, this allows us to see that our spacecraft
+                          is healthy even when we don't have visibility.</p>
+
+                          <p class="text-white">The CSIM project has been a stressful one, but one that made me realize
+                          that I like the fast paced environment of cubesats and the freedom for creativity. It has been
+                          one of my favorite projects to work on at LASP.</p>
+                          <img src="img/csim.jpg" style="width: 100%;"/>
+                      </div>
+
+
+
+                  </div>
 
               </div>
+        </section>
+
+        <section class="senior-design-section">
+            <!-- Featured Project Row -->
+            <div id="senior-design" class="container text-center">
+                <div class="row">
+                    <div class="col-lg-12 mx-auto">
+                        <h1 class="text-white">University of Colorado Boulder</h1>
+                        <h2 class="text-light">In Conjunction with Los Alomos National Labs</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <p class="text-white">
+                            The Univeristy of Colorado Boulder's Mechanical Engineering Department hosts an incredible
+                            senior design program that has evolved over the years into something great. The department
+                            partners with industry leaders to provide teams with both the funding, resources, and support
+                            needed to develop a great product.
+                        </p>
+                        <p class="text-white">
+                            Early in the program, teams are formed by the professors based on skills and personality.
+                            The teams then meet to decide which projects they want to pursue. In a frenzy, the teams develop
+                            proposals for the companies as to why their team would be the best team for the project. Proposals
+                            are sent out, and the companies choose the one that they think fits their project the best. Teams then
+                            immediately get to work. We followed a strict systems engineering process. Teams started with a
+                            specs and planning report and presentation that was due shortly after receiving the project. This was
+                            presented to the client and the scope of the projects were negotiated. The teams then worked towards
+                            PDR, selecting designs and providing presentations for the client to communicate design intent
+                            and start to provide a schedule for the rest of the project. Finally, towards the end of the semester,
+                            CDR was completed. Teams presented high quality presentations to the clients with full designs
+                            and a complete schedule for going forward. For my team at least, no stone was left unturn. Along
+                            with the CDR, teams also had to undergo manufacturing reviews with the machinists and professors as well
+                            as test reviews.
+                        </p>
+                        <p class="text-white">
+                            The second semester of senior design began before the semester began. Over winter break,
+                            we were in the machine shop starting to create parts. Our philosophy was to frontload the
+                            semester so that we could deal with the problems as they arose with less stress due to the
+                            time constraint. This turned out to be a good way to attack it. Even though we were busy
+                            non-stop, we were able to deliver a functioning product to our client.
+                        </p>
+                        <p class="text-white">
+                            The project that our team tackled was titled (by the client) the "Unique Sequence Pin Extractor."
+                            It took me about a week to figure out what this meant. At a high level, my team created a device
+                            that would serve as a barrier between devices on the "Internet of Things" and the internet.
+                            An easy example is a self driving car. Imagine someone was able to hack into the steering
+                            system. This person could then cause havoc. Our device was designed to prevent brute force
+                            attacks on devices connected to the internet. If a password is entered correctly, the user
+                            is granted access. If the password is not correct, the device physically locks out the user. This
+                            is done by translating the input password into revolutions of gears. If the user gets the password correct,
+                            holes in the three concentric gears align and a laser is shown through all three gears, illuminating
+                            a phototransistor that then gives access to the device. If the user puts in the wrong password, the gears
+                            turn to a certain position and the holes in the gears then are not concentric. When the laser is shown,
+                            the phototransistor does not become illuminated. A custom logic circuit then supplies a large amount
+                            of current through a fuse and blows it, rendering the device useless. The user then cannot try to
+                            get into the device again until a technician replaces the fuse.
+                        </p>
+                        <p class="text-white">
+                            On this project, I served three primary roles. I was the CAD Engineer, Manufacturing Engineer,
+                            and Electrical Engineer. Below are some quick summaries of some of the components of the
+                            project that I led.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 mx-auto">
+                        <img src="img/poster.jpg" style="max-width: 100%; height: auto; width: auto;"/>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                <div class="col-lg-6">
+                        <img src="img/lanlbox.jpg" style="width: 100%;"/>
+                    </div>
+                    <div class="col-lg-6">
+                        <h3 class="text-md-center">CAD Revision Control</h3>
+                        <p class="text-white">
+                            As CAD Engineer, it was my responsibility to develop a revision control methodology that would
+                            keep the design process simple. Coming from the a background of operations where revision control
+                            is key, I knew the importance of maintaining a tight revision control practice. The approach I took
+                            in doing this was to develop a software that would keep the documentation and revision process
+                            consistent. Using Google Sheets, I developed
+                            <a href="https://developers.google.com/apps-script/guides/sheets">scripts</a> that allowed users
+                            to easily register parts, make revisions, and link assemblies to different parts. I decided to use
+                            this approach instead of GrabCAD as my experience with GrabCAD in the past proved to be too complicated.
+                            With my method, we easily tracked what files lived where, what revision they were, and who the last
+                            person was to edit it. To accompany my custom software, I also wrote a comprehensive
+                            <a href="files/cad_handbook.pdf" target="_blank">revision control
+                            document</a>  that communicated how I hoped that the revision control would be done.
+                            <br><img src="img/lanl_file_tracker.png" style="width: 70%;"/>
+
+                        </p>
+                    </div>
+                    <div class="col-lg-6">
+                        <h3 class="text-md-center">Manufacturing Scheduling and Timeline</h3>
+                        <p class="text-white">
+                            Second semester was a frenzy to get as much machined as quickly as possible. A large issue
+                            that arises with the machine shop is that it gets extremely busy as the year moves forward. My goal
+                            was to get as many parts machined as quickly as possible so that we could minimize our time
+                            waiting for machines to be open. In order to do this, I had to schedule around people's class
+                            schedules, machine shop hours, and stock availability (we had a large quantity of items on
+                            back-order). I created an ambitious Gantt Chart, and somehow we stayed ahead of it. Because
+                            it was a team of six students, we rarely would have overlap when machining. Therefore I recognized
+                            that it would be difficult to commuincate what was done and what the next steps were. We made
+                            use of Slack, but it's not always a reliable way to commuincate detailed information about
+                            physical parts. To combat this, I developed a paper system. As parts were created, they
+                            were put into specific places in our locker and each got a status sheet that allowed us to
+                            detail what was done, what needed to be done, how much time was spent on it, etc. With this
+                            system, somebody could walk into the shop, grab the correct part, and know exactly what needed
+                            to be done next. With the paper taped directly to the parts, we were able to avoid confusion.
+                            <img src="img/gantt.png" style="width: 100%;"/><br><br>
+                            <img src="img/part-tracker.png" style="width: 100%;"/>
+
+                        </p>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <h3 class="text-md-center">Drawing Creation and Approval</h3>
+                        <p class="text-white">
+                            As the CAD engineer, one of my main jobs was ensuring the quality and manufacturability
+                            of drawings. In this specific project, tolerance stackup was a large concern. The project
+                            consisted of three sets of gears that were required to be in precise mesh. Keeping track
+                            of tolerances and their effects on the performance of the product required organization
+                            and attention to detail. Using my knowledge in drawing creation, I was able to fine tune
+                            tolerances to create a product that functioned as expected without having to scrap many parts.
+                            <img src="img/drawing.png" style="width: 100%;"/>
+                        </p>
+                    </div>
+                    <div class="col-lg-6">
+                        <h3 class="text-md-center">Custom Circuit Design, Testing, and Fabrication</h3>
+                        <p class="text-white">
+                            One of the major components of this project was what we coined as the "Logic Circuit." The
+                            logic circuit was what controlled whether or not the user could gain access to the device. It
+                            had to be able to control an output based on different inputs. For example, if there was a
+                            signal from the phototransistor being lit by the laser, and there was a signal from the laser
+                            actually being fired, the logic circuit was to output a high signal to, in our case, extract
+                            a solenoid. In order to do this, I had to design a circuit using multiple logic gates to create
+                            the desired output. I simulated the circuit using National Instrument's Multisim program. Once
+                            I was happy with the performance of the simulation, I began to construct the circuit on a
+                            breadboard and iterated until I was happy with the performance of the prototype. Finally,
+                            the most difficult part, I had to design a PCB that was small enough to fit size constraint
+                            imposed by our client. In order to do this, I laid out the design using Eagle and made many
+                            iterations of the design until I got a design that worked. The final design worked as intended
+                            and I gained A LOT of knowledge out of the process.
+                            <img src="img/circuit-picture.jpg" style="width: 100%;"/>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="robotics-section">
+            <!-- Featured Project Row -->
+            <div id="robotics" class="container text-center">
+                <div class="row">
+                    <div class="col-lg-12 mx-auto">
+                        <h1 class="text-white">CU Robotics Robotic Mining Team</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h3 class="text-md-center">Mechanical Team</h3>
+                        <p class="text-white">
+                            When I first started on the robotics team in 2015, I joined the mechanical team. On this team,
+                            I used SOLIDWORKS to design the actuation system for our mining tool. I also spent multiple
+                            all nighters building and testing, building and testing. Our school's first year at the
+                            <a href="https://www.nasa.gov/offices/education/centers/kennedy/technology/nasarmc.html">NASA
+                            Robotic Mining Competition </a> did not go quite as well as we would have liked. Unfortunately, the
+                            software was not to where it needed to be and we were unable to communicate with the robot come
+                            competition time.
+                        </p>
+                        <img src="img/robot1.jpg" style="width: 100%;"/>
+                    </div>
+                    <div class="col-lg-6">
+                        <h3 class="text-md-center">Software Team</h3>
+                        <p class="text-white">
+                            Going into my second year on the team, I once again was on the mechanical team helping to
+                            design critical components of the robot. This year however, trouble came just before leaving
+                            for competition. With about a month to spare and final exams on the horizion, our software
+                            team (really just one guy) took off, leaving behind no software. With very few options, I stepped
+                            up to the plate to try to figure something out. I spent hours and hours trying to learn
+                            <a href="http://www.ros.org/">ROS</a> in time to get a functioning robot. With help from other
+                            teams on campus, I was able to wrap my head around how ROS works and write functioning software
+                            to achieve teleoperations on the robot. And the hours of frustrating work paid off when we managed
+                            to come in second place at the mining competition in Cape Canaveral!
+                        </p>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/EZF33ipq8V0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <p class="text-white">
+                            The following year I accepted the role as software team lead. I managed the team as best I could,
+                            and we built some software that could have "theoretically" driven the robot autonomously. However,
+                            we were never able to test as the robot was not finished until just hours before packing up and
+                            leaving for competition. Unfortunately, belt system that was developed for the drivetrain could
+                            not achieve enough tension to keep the rubber belt from slipping on the cogs. In conjunction with
+                            the long wheel base and skid steering, we were not able to turn the robot. Fortunate for us, we were
+                            placed in the arena in such a way that we would have never needed to turn. We decided to perform
+                            the competition using teleoperations (because the autonomy was never tested enough to be confident with it).
+                            Everything was working great, until we dug our auger too deep into the regolith and got ourselves
+                            stuck, due once again to a belt slipping on the part to remove the tool from the regolith. We
+                            eventually ran our motors too hard in desperation to get unstuck and caught the robot on fire. Not
+                            the end we had hoped for.
+                        </p>
+                        <img src="img/robot3.jpg" style="width: 100%;"/>
+                        <p class="text-white">
+                            Now, in my fourth year on the team, I have taken more of a mentor approach. As someone who
+                            has failed in this competition so many times, I understand what it takes to be successful. For
+                            example, I have been coaching the current software lead on how he can incorporate his team early
+                            and often. One approach to do this, build a test platform that anybody can test on. We will see
+                            how the team performs come May. Stay tuned...
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
     <div class="container">
         <!-- Project One Row -->
