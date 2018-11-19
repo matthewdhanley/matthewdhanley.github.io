@@ -1,6 +1,6 @@
 // create an array with nodes
 var nodes = new vis.DataSet([
-  {id: 1, label: 'Me',x:0,y:0,fixed:true,mass:5},
+  {id: 1, label: 'Matthew Hanley',x:0,y:0,fixed:true,mass:5, image: 'img/matt.jpg', shape:'circularImage',size:100},
   {id: 2, modal: 'cu', image: 'img/cu-logo.png', shape: 'image',size:80,mass:5},
   {id: 3, modal: 'lasp', image: 'img/lasp-logo.png', shape: 'image',size:40},
   {id: 4, image: 'img/robotics-logo.png', shape: 'circularImage',size:50},
@@ -28,6 +28,7 @@ var nodes = new vis.DataSet([
   {id: 38, modal: 'blob', label: 'Blob Tracking', shape: 'icon', icon:{face: '"Font Awesome 5 Free"', code:'\uf05b', size: 50, color:'#000000'}},
   {id: 39, modal: 'popsicle', label: 'Popsicle Sticks', shape: 'icon', icon:{face: '"Font Awesome 5 Free"', code:'\uf128', size: 50, color:'#000000'}},
   {id: 40, modal: 'web', label: 'Web Development', shape: 'icon', icon:{face: '"Font Awesome 5 Free"', code:'\uf1c9', size: 50, color:'#000000'}},
+  {id: 63, modal: 'redbull', label: 'SlopeSoakers', shape: 'image', image: 'img/slopesoakers.png', size:40},
 
 // hobbies
   {id: 32, modal: 'hobbies', label: 'Hobbies'},
@@ -36,6 +37,7 @@ var nodes = new vis.DataSet([
   {id: 35, modal: 'kite', label: 'Kiteboarding', shape: 'icon', icon:{face: '"Font Awesome 5 Free"', code:'\uf72e', size: 50, color:'#000000'}},
   {id: 36, modal: 'climb', label: 'Climbing',    shape: 'icon', icon:{face: '"Font Awesome 5 Free"', code:'\uf6fc', size: 50, color:'#000000'}},
   {id: 37, modal: 'beer', label: 'Beer',         shape: 'icon', icon:{face: '"Font Awesome 5 Free"', code:'\uf0fc', size: 50, color:'#000000'}},
+  {id: 62, modal: 'bike', label: 'Bike',         shape: 'icon', icon:{face: '"Font Awesome 5 Free"', code:'\uf206', size: 50, color:'#000000'}},
 
 
 //  SKILLS
@@ -45,13 +47,16 @@ var nodes = new vis.DataSet([
   {id: 27, image: 'img/cuda.jpg', shape: 'image', size:50},
   {id: 29, modal: 'deeplearning', label: 'Deep Learning for Computer Vision'},
   {id: 30, modal: 'accelcomp', label: 'Accelerated Computing with CUDA C/C++'},
+  {id: 57, label: 'Engineering Equation Solver (EES)'},
+  {id: 58, label: 'Python', image: 'img/python.png', shape: 'image', size: 40},
+  {id: 59, label: 'C/C++', image: 'img/c.png', shape: 'image', size: 40},
+  {id: 60, label: 'Matlab/Simulink', image: 'img/matlab.png', shape: 'image', size: 50},
+  {id: 61, label: 'Databases', image: 'img/db.png', shape: 'image', size: 30},
 
 // coursework
   {id: 56, modal: 'courses', label: 'Coursework', shape: 'icon', icon:{face: '"Font Awesome 5 Free"', code:'\uf02d', size: 50, color:'#000000'}},
   {id: 41, modal: 'eng-comp', label: 'Engineering Computing'},
   {id: 42, modal: 'cad', label: 'Computer Aided Design'},
-  {id: 43, modal: 'solids', label: 'Mechanics of Solids'},
-  {id: 44, modal: 'fluids', label: 'Fluid Dynamics'},
   {id: 45, modal: 'data-structures', label: 'Data Structures'},
   {id: 46, modal: 'thermo', label: 'Thermo (I/II)'},
   {id: 47, modal: 'compdes', label: 'Component Design'},
@@ -118,12 +123,16 @@ var edges = new vis.DataSet([
   {from: 23, to: 19},
   {from: 23, to: 15},
   {from: 23, to: 16},
+  {from: 23, to: 42},
+  {from: 23, to: 47},
+  {from: 23, to: 49},
 
   // opencv to x
   {from: 26, to: 25},
   {from: 26, to: 28},
   {from: 26, to: 20},
   {from: 26, to: 38},
+  {from: 26, to: 50},
 
   // cuda to x
   {from: 27, to: 25},
@@ -136,11 +145,13 @@ var edges = new vis.DataSet([
   {from: 32, to: 35},
   {from: 32, to: 36},
   {from: 32, to: 37},
+  {from: 32, to: 62},
 
   // personal to x
   {from: 31, to: 38},
   {from: 31, to: 39},
   {from: 31, to: 40},
+  {from: 31, to: 63},
 
   // coursework
   {from: 56, to: 41},
@@ -158,6 +169,57 @@ var edges = new vis.DataSet([
   {from: 56, to: 53},
   {from: 56, to: 54},
   {from: 56, to: 55},
+
+  // ees
+  {from: 57, to: 46},
+
+  //c++
+  {from: 59, to: 41},
+  {from: 59, to: 45},
+  {from: 59, to: 48},
+  {from: 59, to: 53},
+  {from: 59, to: 25},
+  {from: 59, to: 28},
+  {from: 59, to: 22},
+  {from: 59, to: 27},
+
+  // python
+  {from: 58, to: 20},
+  {from: 58, to: 8},
+  {from: 58, to: 13},
+  {from: 58, to: 24},
+  {from: 58, to: 25},
+  {from: 58, to: 28},
+  {from: 58, to: 38},
+  {from: 58, to: 45},
+  {from: 58, to: 50},
+  {from: 58, to: 53},
+  {from: 58, to: 54},
+  {from: 58, to: 29},
+  {from: 58, to: 22},
+  {from: 58, to: 27},
+
+  // databases
+  {from: 61, to: 5},
+  {from: 61, to: 8},
+  {from: 61, to: 10},
+  {from: 61, to: 40},
+  {from: 61, to: 53},
+  {from: 61, to: 54},
+
+  // matlab
+  {from: 60, to: 6},
+  {from: 60, to: 14},
+  {from: 60, to: 28},
+  {from: 60, to: 39},
+  {from: 60, to: 41},
+  {from: 60, to: 46},
+  {from: 60, to: 47},
+  {from: 60, to: 49},
+  {from: 60, to: 51},
+  {from: 60, to: 52},
+  {from: 60, to: 55},
+
 
 ]);
 
@@ -187,7 +249,11 @@ var options = {
     }
   },
   edges: {
-    arrows: 'to'
+    arrows: 'to',
+    color: {
+      highlight: '#00fffc',
+    },
+    selectionWidth: 5,
   },
   interaction: {
     hover: true
@@ -210,12 +276,23 @@ var options = {
   }
 };
 
+var options2 = {
+  // position: {x:positionx,y:positiony}, // this is not relevant when focusing on nodes
+  scale: 0.5,
+  offset: {x: 0, y: 0},
+  animation: {
+    duration: 1000,
+    easingFunction: "easeInOutQuad"
+  }
+};
+
 // initialize your network!
 var network = new vis.Network(container, data, options);
 network.redraw();
 network.on( 'click', function(properties) {
   var ids = properties.nodes;
   var clickedNodes = nodes.get(ids);
+  network.focus(ids[0], options2);
   try {
     var modal = document.getElementById(clickedNodes[0].modal);
   }
@@ -242,3 +319,7 @@ network.on( 'click', function(properties) {
       }
     }
   }});
+
+function edges_fn(values, id, selected, hovering){
+  values.width = 5;
+}

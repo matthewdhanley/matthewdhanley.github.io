@@ -1,3 +1,3 @@
 $(function(){
-  $("#modals").load("modals/modals.html");
+  $("#modals").load("modals.html");
 });

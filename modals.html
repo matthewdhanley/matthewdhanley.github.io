@@ -2,12 +2,15 @@
 <div id="cu" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
-    <span class="close">&times;</span>
-    <p>I am a graduate student pursuing a concurrent Bachelor's and Master's degree in Mechanical Engineering at the
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>University of Colorado Boulder</h2>
+    </div>
+    <div class="modal-body"><p>I am a graduate student pursuing a concurrent Bachelor's and Master's degree in Mechanical Engineering at the
       the University of Colorado Boulder. Minoring in Computer Science, I have found that my passions lie more in the software
       side of engineering. Because of this, I began to focus my efforts on topics such as robotics, controls, and software engineering. Using knowledge gained
       from Mechanical Engineering courses in conjunction with skills learned in the computer science department, I am able to solve complex
-      problems that involve both physical systems and complex software.</p>
+      problems that involve both physical systems and complex software.</p></div>
   </div>
 </div>
 
@@ -15,8 +18,11 @@
 <div id="lasp" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
-    <span class="close">&times;</span>
-    <p class="text-white">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>LASP</h2>
+    </div>
+    <div class="modal-body"><p class="text-white">
       I was hired on as a Command Controller at the LASP in May of 2016. The first three months
       consisted of a training program to certify myself and eight others to be able to work on
       console with multiple different NASA spacecraft. By the end of the summer, I was one of few
@@ -46,7 +52,8 @@
       I did at LASP, which I had to give to all the flight directors, my supervisor, and the
       department director. After my application and presentation, I was appointed to the position
       of Graduate Lead for the QuikSCAT Spacecraft.
-    </p>
+    </p></div>
+    </div>
   </div>
 </div>
 
@@ -54,16 +61,18 @@
 <div id="sim-science" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
-    <span class="close">&times;</span>
-    <h3 class="text-md-center">SORCE SIM Science Performance Tracking</h3>
-    <p class="text-white">When I became lead of the SORCE SIM subsystem, I found that the script
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>SORCE SIM Science Performance Tracking</h2>
+    </div>
+    <div class="modal-body"><p class="text-white">When I became lead of the SORCE SIM subsystem, I found that the script
       that calculates and stores science experiment success statistics was incredibly slow (on the
       order of multiple hours for retrieving data for a single month). I took it upon myself to
       rewrite the code to not only work faster, but also smarter. Using IDL (LASP standard, not my first choice...),
       I implemented a system that evaluates experiment success by extracting scheduled activities and comparing
       with telemetry data. Doing this, I was able to determine if, when, and why a certain experiment failed. This
       data was then stored in a relational SQLite database for fast retrieval in the future. This updated code
-      took a process that took hours per month and brought it down to just a few minutes.</p>
+      took a process that took hours per month and brought it down to just a few minutes.</p></div>
   </div>
 </div>
 
@@ -71,9 +80,11 @@
 <div id="qs-wheels" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
-    <span class="close">&times;</span>
-    <h3 class="text-md-center">QuikSCAT Reaction Wheel Friction Analysis</h3>
-    <p class="text-white">On QuikSCAT, there was a frequent problem that would occur with the reaction
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>QuikSCAT Reaction Wheel Friction Analysis</h2>
+    </div>
+    <div class="modal-body"><p class="text-white">On QuikSCAT, there was a frequent problem that would occur with the reaction
       wheels. Occasionally, there would be a "jag" (a.k.a. torque drag) that would occur on one of the
       four wheels. The analysis started with the hypothesis that the frequency of the jags were
       temperature dependent, however I proved this to be false. Although the results were underwhelming,
@@ -83,7 +94,7 @@
       between variables, but included a time intensity aspect using a rainbow coloring scheme. For me,
       this plot allowed me to quickly see if torque increases were temporary or persistent for long periods
       of time. Fun fact, the idea for this tool came from a common 2D histogram technique used in
-      computer vision!</p>
+      computer vision!</p></div>
   </div>
 </div>
 
@@ -91,9 +102,11 @@
 <div id="aim-shadow" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
-    <span class="close">&times;</span>
-    <h3 class="text-md-center">AIM Lunar Shadow Prediction Tool</h3>
-    <p class="text-white">When I joined the AIM Power subsystem, I was taught how to make lunar
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>AIM Lunar Shadow Prediction Tool</h2>
+    </div>
+    <div class="modal-body"><p class="text-white">When I joined the AIM Power subsystem, I was taught how to make lunar
       shadow predictions. These are made whenever there is a solar eclipse that could affect the spacecraft
       as we do not want to have a situation where the spacecraft undervoltages and is kicked into a
       safemode (espically on AIM since bitlock was non-existant and recovery would be near impossible).
@@ -108,7 +121,7 @@
       code to elminate time waste and improve the results. I created a GUI in IDL that had minimal
       inputs and output valuable plots. I was also able to model attitude mode behavior in the predictions
       to produce the most accurate results possible. To quote the lead of the subsystem, "This tool
-      is magical."</p>
+      is magical."</p></div>
   </div>
 </div>
 
@@ -116,9 +129,11 @@
 <div id="rtsviewer" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
-    <span class="close">&times;</span>
-    <h3 class="text-md-center">SORCE Automation Visualization</h3>
-    <p class="text-white">SORCE is an incredibly complex spacecraft, as discussed in this
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>SORCE Automation Visualization</h2>
+    </div>
+    <div class="modal-body"><p class="text-white">SORCE is an incredibly complex spacecraft, as discussed in this
       <a href="https://arc.aiaa.org/doi/pdf/10.2514/6.2018-2619">paper</a> by my colleagues. Every
       orbit, all power draws that are not necessary to survival (and sometimes even those that are vital) are
       turned off at Earth eclipse entry. Once the spacecraft comes back into the sun, it must completely
@@ -132,16 +147,18 @@
       who are unfamiliar with web development to easily update nodes and edges. In the image below, each node is action.
       The actions are connected with directional edges. The actions are color coded by their origination. Zooming
       in with the scroll wheel allows users to quickly view information about the actions.</p>
-    <img src="img/rts-viewer.png" style="width: 70%;" alt="SORCE Automation Webpage"/>
+    <img src="img/rts-viewer.png" style="width: 70%;" alt="SORCE Automation Webpage"/></div>
   </div>
 </div>
 
 <div id="procreader" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
-    <span class="close">&times;</span>
-    <h3 class="text-md-center">LASP Proc Reader</h3>
-    <p class="text-white">The LASP Proc (short for Procedure) Reader was the brainchild of a student
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>LASP Proc Reader</h2>
+    </div>
+    <div class="modal-body"><p class="text-white">The LASP Proc (short for Procedure) Reader was the brainchild of a student
       before me. He implemented it for two missions, hard coding much of the logic to be mission specific.
       I took his idea and gave it a makeover. The tool has many purposes. First, it provides syntax
       highlighting for CSTOL (Colorado System Test Operational Language, used for commanding LASP's
@@ -156,7 +173,7 @@
     <img src="img/proc-reader-1.png" style="width: 100%;"/>
     <br>
     <br>
-    <img src="img/proc-reader-2.png" style="width: 100%;"/>
+    <img src="img/proc-reader-2.png" style="width: 100%;"/></div>
   </div>
 </div>
 
@@ -164,9 +181,11 @@
 <div id="plotcheck" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
-    <span class="close">&times;</span>
-    <h3 class="text-md-center">Plot Checking Log</h3>
-    <p class="text-white">One of the big selling points of LASP as mission operators is that we
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Plot Checking Log</h2>
+    </div>
+    <div class="modal-body"><p class="text-white">One of the big selling points of LASP as mission operators is that we
       thoroughly check telemetry for all of our missions daily. This allows us to catch large anomalies
       before they happen. In order to do this, there must be a log of who has checked what subsystems' telemetry.
       This was traditionally done using Python CGI and plain HTML. This worked great...in 2001. Now, we all have
@@ -175,7 +194,7 @@
       also created features that allow users to sort by checked status or mission to quickly determine if telemetry
       still needed checking. On top of it all, I added some fun animations when the cards were sorted. A basic project,
       but it got me excited about web development.</p>
-    <img src="img/plotcheck.png" style="width: 50%;"/>
+    <img src="img/plotcheck.png" style="width: 50%;"/></div>
   </div>
 </div>
 
@@ -183,9 +202,12 @@
 <div id="decom" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
-    <span class="close">&times;</span>
-    <h3 class="text-md-center">QuikSCAT Deoommissioning</h3>
-    <p class="text-white">As the Graduate Lead of QuikSCAT, I played a large role in the
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>QuikSCAT Deoommissioning</h2>
+    </div>
+
+    <div class="modal-body"><p class="text-white">As the Graduate Lead of QuikSCAT, I played a large role in the
       <a href="https://www.jpl.nasa.gov/news/news.php?feature=7260">decommissioning</a>
       of the 19 year old spacecraft. I was able to attend all meetings discussing decommissioning
       plans between Ball Aerospace, LASP, JPL, CARA, NEN, and more. I took in depth notes to keep
@@ -217,7 +239,7 @@
       then translated them to IIRVs in the format specified by the ground stations which were then
       sent over SFTP. This was just one of many tasks performed to help passivate the spacecraft. Not to mention,
       I had the privilege of sending the last command ever to the spacecraft! </p>
-    <img src="img/decommissioning.jpg" style="width: 100%;"/>
+    <img src="img/decommissioning.jpg" style="width: 100%;"/></div>
   </div>
 </div>
 
@@ -225,9 +247,11 @@
 <div id="csim" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
-    <span class="close">&times;</span>
-    <h3 class="text-md-center">CSIM Development and Commissioning</h3>
-    <p class="text-white">Another one of my tasks as a graduate student was to help with the ground
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>CSIM Development and Commissioning</h2>
+    </div>
+    <div class="modal-body"><p class="text-white">Another one of my tasks as a graduate student was to help with the ground
       segment of the <a href="http://lasp.colorado.edu/home/csim/?doing_wp_cron=1542489347.9603259563446044921875">CSIM</a>
       cubesat mission. This was (and still is) a very involved mission that had a lot of work that
       needed to be done in a short amount of time. Starting in August 2018 for a November 2018 launch,
@@ -266,7 +290,7 @@
     <p class="text-white">The CSIM project has been a stressful one, but one that made me realize
       that I like the fast paced environment of cubesats and the freedom for creativity. It has been
       one of my favorite projects to work on at LASP.</p>
-    <img src="img/csim.jpg" style="width: 100%;"/>
+    <img src="img/csim.jpg" style="width: 100%;"/></div>
   </div>
 </div>
 
@@ -274,8 +298,11 @@
 <div id="lanl" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
-    <span class="close">&times;</span>
-    <p class="text-white">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Senior Design | Los Alamos National Labs</h2>
+    </div>
+    <div class="modal-body"><p class="text-white">
       The Univeristy of Colorado Boulder's Mechanical Engineering Department hosts an incredible
       senior design program that has evolved over the years into something great. The department
       partners with industry leaders to provide teams with both the funding, resources, and support
@@ -323,7 +350,7 @@
       On this project, I served three primary roles. I was the CAD Engineer, Manufacturing Engineer,
       and Electrical Engineer. Below are some quick summaries of some of the components of the
       project that I led.
-    </p>
+    </p></div>
   </div>
 </div>
 
@@ -331,8 +358,11 @@
 <div id="poster" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
-    <span class="close">&times;</span>
-    <img src="img/poster.jpg" style="max-width: 100%; height: auto; width: auto;"/>
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Expo Poster</h2>
+    </div>
+    <div class="modal-body"><img src="img/poster.jpg" style="max-width: 100%; height: auto; width: auto;"/></div>
   </div>
 </div>
 
@@ -340,9 +370,11 @@
 <div id="cadrev" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
-    <span class="close">&times;</span>
-    <h3 class="text-md-center">CAD Revision Control</h3>
-    <p class="text-white">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>CAD Revision Control</h2>
+    </div>
+    <div class="modal-body"><p class="text-white">
       As CAD Engineer, it was my responsibility to develop a revision control methodology that would
       keep the design process simple. Coming from the a background of operations where revision control
       is key, I knew the importance of maintaining a tight revision control practice. The approach I took
@@ -355,8 +387,8 @@
       person was to edit it. To accompany my custom software, I also wrote a comprehensive
       <a href="files/cad_handbook.pdf" target="_blank">revision control
         document</a>  that communicated how I hoped that the revision control would be done.
-      <br><img src="img/lanl_file_tracker.png" style="width: 200px;"/>
     </p>
+    <br><img src="img/lanl_file_tracker.png" style="width: 200px;"/></div>
   </div>
 </div>
 
@@ -364,9 +396,11 @@
 <div id="manu" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
-    <span class="close">&times;</span>
-    <h3 class="text-md-center">Manufacturing Scheduling and Timeline</h3>
-    <p class="text-white">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Manufacturing Scheduling and Timeline</h2>
+    </div>
+    <div class="modal-body"><p class="text-white">
       Second semester was a frenzy to get as much machined as quickly as possible. A large issue
       that arises with the machine shop is that it gets extremely busy as the year moves forward. My goal
       was to get as many parts machined as quickly as possible so that we could minimize our time
@@ -383,7 +417,7 @@
       to be done next. With the paper taped directly to the parts, we were able to avoid confusion.
       <img src="img/gantt.png" style="width: 100%;"/><br><br>
       <img src="img/part-tracker.png" style="width: 100%;"/>
-    </p>
+    </p></div>
   </div>
 </div>
 
@@ -391,18 +425,19 @@
 <div id="draw" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
-    <span class="close">&times;</span>
-    <h3 class="text-md-center">Drawing Creation and Approval</h3>
-    <p class="text-white">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Drawing Creation and Approval</h2>
+    </div>
+    <div class="modal-body"><p class="text-white">
       As the CAD engineer, one of my main jobs was ensuring the quality and manufacturability
       of drawings. In this specific project, tolerance stackup was a large concern. The project
       consisted of three sets of gears that were required to be in precise mesh. Keeping track
       of tolerances and their effects on the performance of the product required organization
       and attention to detail. Using my knowledge in drawing creation, I was able to fine tune
       tolerances to create a product that functioned as expected without having to scrap many parts.
-      <img src="img/drawing.png" style="width: 100%;"/>
     </p>
-    </p>
+    <img src="img/drawing.png" style="width: 100%;"/></div>
   </div>
 </div>
 
@@ -411,9 +446,11 @@
 <div id="circuit" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
-    <span class="close">&times;</span>
-    <h3 class="text-md-center">Custom Circuit Design, Testing, and Fabrication</h3>
-    <p class="text-white">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Custom Circuit Design, Testing, and Fabrication</h2>
+    </div>
+    <div class="modal-body"><p class="text-white">
       One of the major components of this project was what we coined as the "Logic Circuit." The
       logic circuit was what controlled whether or not the user could gain access to the device. It
       had to be able to control an output based on different inputs. For example, if there was a
@@ -427,8 +464,8 @@
       imposed by our client. In order to do this, I laid out the design using Eagle and made many
       iterations of the design until I got a design that worked. The final design worked as intended
       and I gained A LOT of knowledge out of the process.
-      <img src="img/circuit-picture.jpg" style="width: 100%;"/>
     </p>
+    <img src="img/circuit-picture.jpg" style="width: 100%;"/></div>
   </div>
 </div>
 
@@ -437,9 +474,11 @@
 <div id="robomeche" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
-    <span class="close">&times;</span>
-    <h3 class="text-md-center">Mechanical Team</h3>
-    <p class="text-white">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Robotics Mechanical Team</h2>
+    </div>
+    <div class="modal-body"><p class="text-white">
       When I first started on the robotics team in 2015, I joined the mechanical team. On this team,
       I used SOLIDWORKS to design the actuation system for our mining tool. I also spent multiple
       all nighters building and testing, building and testing. Our school's first year at the
@@ -448,16 +487,18 @@
       software was not to where it needed to be and we were unable to communicate with the robot come
       competition time.
     </p>
-    <img src="img/robot1.jpg" style="width: 100%;"/>
+    <img src="img/robot1.jpg" style="width: 100%;"/></div>
   </div>
 </div>
 
 <div id="robocsci" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
-    <span class="close">&times;</span>
-      <h3 class="text-md-center">Software Team</h3>
-      <p class="text-white">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Robotics Software Team</h2>
+    </div>
+      <div class="modal-body"><p class="text-white">
         Going into my second year on the team, I once again was on the mechanical team helping to
         design critical components of the robot. This year however, trouble came just before leaving
         for competition. With about a month to spare and final exams on the horizion, our software
@@ -490,7 +531,7 @@
         example, I have been coaching the current software lead on how he can incorporate his team early
         and often. One approach to do this, build a test platform that anybody can test on. We will see
         how the team performs come May. Stay tuned...
-      </p>
+      </p></div>
   </div>
 </div>
 
@@ -498,16 +539,16 @@
 <div id="qsgrad" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
-    <span class="close">&times;</span>
-    <div class="col-lg-6">
-      <h3 class="text-md-center">QuikSCAT Grad Lead</h3>
-      <p class="text-white">
-       As the QuikSCAT Graduate lead, I had many responsiblities to keep the mission running smoothly. These included
-        scheduling meetings, managing subsystem teams, ensuring quality of reports, and more. I also had to perform tasks
-        such as collision avoidance burn planning in the event that we got warning of a possible conjunction. In this position,
-        I learned to become more organized and to delegate.
-      </p>
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>QuikSCAT Grad Lead</h2>
     </div>
+    <div class="modal-body"><p class="text-white">
+     As the QuikSCAT Graduate lead, I had many responsiblities to keep the mission running smoothly. These included
+      scheduling meetings, managing subsystem teams, ensuring quality of reports, and more. I also had to perform tasks
+      such as collision avoidance burn planning in the event that we got warning of a possible conjunction. In this position,
+      I learned to become more organized and to delegate.
+    </p></div>
   </div>
 </div>
 
@@ -515,23 +556,27 @@
 <div id="nvidia" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
-    <span class="close">&times;</span>
-    <div class="col-lg-6">
-      <p class="text-white">
-        A major part of my schooling going into senior year became embedded computing. This led me into beginning to fiddle
-        with the NVIDIA Jetson TX2, a GPU embedded on a single board computer. My computer vision professor, Dr. Shalom Ruben,
-        asked me if I wanted to do an independent study with the TX2. After a semester of that, I then decided to pursue
-        a thesis using GPU computing.
-      </p>
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>NVIDIA</h2>
     </div>
+    <div class="modal-body"><p class="text-white">
+      A major part of my schooling going into senior year became embedded computing. This led me into beginning to fiddle
+      with the NVIDIA Jetson TX2, a GPU embedded on a single board computer. My computer vision professor, Dr. Shalom Ruben,
+      asked me if I wanted to do an independent study with the TX2. After a semester of that, I then decided to pursue
+      a thesis using GPU computing.
+    </p></div>
   </div>
 </div>
 
 <div id="deeplearning" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
-    <span class="close">&times;</span>
-    <div class="col-lg-6">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Deep Learning and Computer Vision Certificate</h2>
+    </div>
+    <div class="modal-body">
       <img src="img/cv.png" style="width: 100%;"/>
     </div>
   </div>
@@ -540,8 +585,11 @@
 <div id="accelcomp" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
-    <span class="close">&times;</span>
-    <div class="col-lg-6">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Acclerated Computing with CUDA C/C++ Certificate</h2>
+    </div>
+    <div class="modal-body">
       <img src="img/accelerated-computing.png" style="width: 100%;"/>
     </div>
   </div>
@@ -550,28 +598,32 @@
 <div id="ind-study" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
-    <span class="close">&times;</span>
-    <div class="col-lg-6">
-      <p class="text-white">
-        In the second semeseter of my senior year, I was approached by my computer vision professor, Dr. Shalom Ruben,
-        to see if I wanted to do a independent study with him. He proposed a project where I would use the NVIDIA Jetson
-        TX2 to do some sort of accelerated computer vision project. I thought this sounded like a riot so I accepted. Soon
-        enough, I learned that simply running code on a device with a GPU is not enough to take advantage of the GPU. I
-        began to learn about CUDA in depth and kept track of my pieces of code along the way on
-        <a href="https://github.com/matthewdhanley/jetson-tx2">github</a>. I learned about basic CUDA (blocks, threads, etc)
-        and also began to dabble in memory optimizations. Dr. Ruben had the foresight that I needed to learn about the system
-        before I could implement any truely fast computer vision project. Thus, I abandoned any large project and wrote
-        lots of little pieces of code showing the ability of the TX2.
-      </p>
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>TX2 Independent Study</h2>
     </div>
+    <div class="modal-body"><p class="text-white">
+      In the second semester of my senior year, I was approached by my computer vision professor, Dr. Shalom Ruben,
+      to see if I wanted to do a independent study with him. He proposed a project where I would use the NVIDIA Jetson
+      TX2 to do some sort of accelerated computer vision project. I thought this sounded like a riot so I accepted. Soon
+      enough, I learned that simply running code on a device with a GPU is not enough to take advantage of the GPU. I
+      began to learn about CUDA in depth and kept track of my pieces of code along the way on
+      <a href="https://github.com/matthewdhanley/jetson-tx2">github</a>. I learned about basic CUDA (blocks, threads, etc)
+      and also began to dabble in memory optimizations. Dr. Ruben had the foresight that I needed to learn about the system
+      before I could implement any truely fast computer vision project. Thus, I abandoned any large project and wrote
+      lots of little pieces of code showing the ability of the TX2.
+    </p></div>
   </div>
 </div>
 
 <div id="thesis" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
-    <span class="close">&times;</span>
-    <div class="col-lg-6">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Master's Thesis</h2>
+    </div>
+    <div class="modal-body">
       <p class="text-white">
         After my independent study with Dr. Ruben, we decided to take on a Master's thesis. I personally decided to do the
         thesis since LASP was going to be sponsoring me through graduate school. Currently in progress, I am investigating
@@ -581,6 +633,356 @@
         I would like to implement deep learning to try to find any visual features that can determine if the cells are resistant
         to antibiotics before the drugs are introduced to the culture.
       </p>
+    </div>
+  </div>
+</div>
+
+
+<div id="eng-comp" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Engineering Computing</h2>
+    </div>
+    <div class="modal-body">
+      <p class="text-white">
+       This class focused on preparing engineering students for the different programming languages they may encounter
+        in the engineering field. We learned Matlab, C/C++, and VBA in Excel. Turns out, VBA in Excel is an incredibly
+        useful skill to have as it can easily automate many tasks performed in Microsoft Office. I've automated analysis,
+        data manipulation, presentation creation, etc using VBA!
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<div id="cad" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Computer Aided Design</h2>
+    </div>
+    <div class="modal-body">
+      <p class="text-white">
+        This course taught me about how to use SOLIDWORKS, how to create manufacturable engineering drawings, and how to
+        use the different machines in a machine shop. Notable projects in this class included designing and fabricating
+        a "slot car" and modeling an existing product with three or more parts in SOLIDWORKS. I chose to do a longboard
+        which taught me (probably more) than I wanted to learn about creating organic surfaces and performing complex
+        mates. Unfortunately, those files have gone missing :(
+      </p>
+      <img src="img/van.JPG"/>
+    </div>
+  </div>
+</div>
+
+<div id="data-structures" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Data Structures</h2>
+    </div>
+    <div class="modal-body">
+      <p class="text-white">
+        This was a computer science class that taught about the different data structures, their pros and cons, and algorithms
+        to help build them. Some concepts covered included linked lists, trees (of many varieties), arrays, etc.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="thermo" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Data Structures</h2>
+    </div>
+    <div class="modal-body">
+      <p class="text-white">
+        Thermo I was your basic thermo class. Thermo II, however, was one of the more enlightening classes that I took
+        at CU. This class mostly focused on the different power cycles, but most of our projects included designing some
+        sort of system to meet requirements. For example, we had to design a cogeneration power system to replace the
+        existing power system at a "tomato soup" plant, seen below.
+      </p>
+      <img src="img/cogen.jpg"/>
+    </div>
+  </div>
+</div>
+
+
+<div id="compdes" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Component Design</h2>
+    </div>
+    <div class="modal-body">
+      <p class="text-white">
+        The main project in this class was to build a "drill powered vehicle." I worked on a team of 6 over the semester
+        to design, fabricate, and race our vehicle. I was the CAD engineer on the project and was responsible for drawings,
+        renders, analysis, and more. We decided to build a tricycle type vehicle with a low center of gravity that was
+        front wheel drive. We used a fork, wheel, and head tube of a child's bike then fabricated the rest of the frame
+        ourselves. We ended up coming in second place after all was said and done (although the team that won may have
+        bent the rules slightly ¯\_(ツ)_/¯ )
+      </p>
+      <img src="img/dpv.jpg"/>
+    </div>
+  </div>
+</div>
+
+<div id="compsys" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Computer Systems</h2>
+    </div>
+    <div class="modal-body">
+      <p class="text-white">
+        Computer Systems was all about the low level functionality of computers. We learned optimization methods (for
+        CPUs) such as loop unrolling, coalesced memory accesses etc. We also learned how to read and decipher assembly
+        code. We also looked at basic security considerations such as code injection. All the concepts were driven home
+        by the use of labs.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="mfg" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Manufacturing</h2>
+    </div>
+    <div class="modal-body">
+      <p class="text-white">
+        This class taught about many different manufacturing methods as well as manufacturing management strategies. We
+        once again got a lot of time in the machine shop to help us understand the importance of good engineering drawing
+        practices. The main project in this class was to create a "bike wheel light" that was waterproof, had a PCB that
+        caused two LEDs to alternate, and a way to attach it to the wheel. At the end of the semester, each design was
+        voted on, and my design won (see below). I created a box with an acrylic window to see all the electronics that
+        was bonded to a 3D printed enclosure. I then had an access point for the electronics that was closed using screws
+        that went into inset metal threaded inserts. I then sealed the whole thing with an o-ring.
+      </p>
+      <img src="img/light.jpg"/>
+      <img src="img/exploded.JPG"/>
+    </div>
+  </div>
+</div>
+
+<div id="compvis" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Computer Vision</h2>
+    </div>
+    <div class="modal-body">
+      <p class="text-white">
+        Computer Vision (as taught in the Mechanical Engineering department) focused on the algorithms behind image
+        processing. We learned about blurring techniques, edge detection algorithms (i.e. sobel, canny, etc), histograms,
+        and more. We then implemented our knowledge on a course project. I started to do a soduku solver in which you
+        take a picture of the board and then the computer solves it, but I got stuck at the machine learning portion
+        of recognizing the numbers that were already present on the board. I then transitioned to a project in which I
+        tracked specific shapes of a given number of sides. Not as exciting, but still was fun.
+      </p>
+      <img src="img/box.png"/>
+    </div>
+  </div>
+</div>
+
+
+<div id="data-analysis" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Data Analysis</h2>
+    </div>
+    <div class="modal-body">
+      <p class="text-white">
+        Data analysis talked about ways to retrieve data, then how to analyze it. We covered different types of sensors,
+        DAQs, aliasing, clipping, etc. We then also talked about basic analysis such as fitting, statistical analysis,
+        and more. The final project for this class was to devise an experiment in which data was collected then analyized.
+        Our project looked at how quickly CO2 is secreted from a beverage as a function of container type and temperature.
+        You can read about it <a href="files/data.pdf">here</a>.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<div id="sysd" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>System Dynamics</h2>
+    </div>
+    <div class="modal-body">
+      <p class="text-white">
+        System Dynamics came in three parts. First, we learned about modeling complex systems using idealized
+        elements. We then looked at how to look at these models in the Laplace domain and how to simulate their responses
+        to given inputs using techniques such as transfer functions and convolution. Then we took this information to
+        characterize the performance of given systems and assess if they meet requirements. We then spent time looking at
+        the frequency domain analysis of systems, such as bode plots, fourier, etc. Finally, we spent time talking about
+        control. Specifically about how to analyize the performance of different controllers. Techniques included root-locus and simulation.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<div id="software-dev" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Software Development</h2>
+    </div>
+    <div class="modal-body">
+      <p class="text-white">
+        Software development was a CSCI class that looked into high level concepts for software projects. Topics included
+        HTML, CSS, Javascript, NodeJS, PHP, SQL, continuous integration, SAAS, PAAS, and more. The final project
+        for this course was to build a website that included a database with at least three tables. I took the lead
+        on the backend and integration for this project, creating features such as user login, forums, and some other
+        simple features.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="data-mining" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Data Mining</h2>
+    </div>
+    <div class="modal-body">
+      <p class="text-white">
+        Data mining looks at the data pipeline. This class taught about data warehouses, frequent pattern analysis,
+        clustering, classification, and other data analysis type methods. The final project for this course was to
+        develop a data mining program. My team looked at the Yelp Academic dataset with hopes to extract features that
+        will be able to tell if a business will be successful within its first three months of operation.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="feedback" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Feedback Control</h2>
+    </div>
+    <div class="modal-body">
+      <p class="text-white">
+        Feedback Control is a mechanical engineering graduate course that looks at different types of control. We spent
+        time modeling systems then applying controllers to the system. We assessed systems in depth using root-locus,
+        the frequency domain, Routh Horwitz criterion, simulation, and more.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<div id="beer" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Great American Beer Festival 2018</h2>
+    </div>
+    <div class="modal-body">
+      <img src="img/gabf.png"/>
+    </div>
+  </div>
+</div>
+
+<div id="ski" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Whistler, 2017</h2>
+    </div>
+    <div class="modal-body">
+      <img src="img/snowbaord.jpg"/>
+    </div>
+  </div>
+</div>
+
+<div id="photo" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Train Tracks in British Columbia</h2>
+    </div>
+    <div class="modal-body">
+      <img src="img/photo.jpg"/>
+    </div>
+  </div>
+</div>
+
+<div id="bike" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Yeti SB66</h2>
+    </div>
+    <div class="modal-body">
+      <img src="img/bike.jpg"/>
+    </div>
+  </div>
+</div>
+
+<div id="climb" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Boulder Canyon</h2>
+    </div>
+    <div class="modal-body">
+      <img src="img/climb.jpg"/>
+    </div>
+  </div>
+</div>
+
+<div id="kite" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Boulder Canyon</h2>
+    </div>
+    <div class="modal-body">
+      <img src="img/kite.png"/>
+    </div>
+  </div>
+</div>
+
+<div id="redbull" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>RedBull SlopeSoakers</h2>
+    </div>
+    <div class="modal-body">
+      <p>Every year, RedBull Energy puts on an event at Copper Mountain called SlopeSoakers. They hold a competition
+      at CU Boulder in which they invite five teams to compete to design the course for the year. I have now done this
+      two years in a row and have attended the event as a VIP both times! Loads of fun, lots of Redbull.</p>
+      <img src="img/redbull.jpg"/>
     </div>
   </div>
 </div>
