@@ -8,6 +8,13 @@ $(document).ready(function() {
   $('#helpBtn').click(function () {
     $('#helpModal').css('display', 'block');
 
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'Button',
+      eventAction: 'click',
+      eventLabel: 'Clicked Help'
+    });
+
     // When the user clicks on <span> (x), close the modal
     $('#helpModal').find("span").click(function () {
       $('#helpModal').css('display', 'none');

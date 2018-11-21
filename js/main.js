@@ -1,5 +1,12 @@
 /* The redirect to autoplay page function */
 function redirect(){
+  ga('send', {
+    hitType: 'event',
+    eventCategory: 'landing',
+    eventAction: 'timeout',
+    eventLabel: 'Overlay Appeared'
+  });
+
   $('#no-interaction').css("display",'inline-block');
   $('#no-interaction').animate({
     backgroundColor: "#000000",

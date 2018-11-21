@@ -323,6 +323,12 @@ network.on( 'click', function(properties) {
   if (typeof modal !== 'undefined') {
     try {
       modal.style.display = "block";
+      ga('send', {
+        hitType: 'event',
+        eventCategory: 'Node',
+        eventAction: 'click',
+        eventLabel: modal.id
+      });
     }
     catch(err){
       return;
