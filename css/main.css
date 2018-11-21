@@ -125,7 +125,7 @@ div #mynetwork{
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 990; /* Sit on top */
   padding-top: 100px; /* Location of the box */
   left: 0;
   top: 0;
@@ -413,6 +413,30 @@ a:hover {
 .help-title {
   text-align: center;
   padding-top: 10px;
+}
+
+#no-interaction {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0,0,0); /* Fallback color */
+  /*background-color: rgba(0,0,0,0.5); !* Fallback color *!*/
+  opacity: 0;
+  filter: alpha(opacity=100);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+}
+
+#show-help {
+  color: white;
+  position: absolute;
+  left: 50px;
+  top: 115px;
 }
 
 /* ==========================================================================

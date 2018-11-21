@@ -1,6 +1,6 @@
 // create an array with nodes
 var nodes = new vis.DataSet([
-  {id: 1, label: 'Matthew Hanley',x:0,y:0,fixed:true,mass:5, image: 'img/matt.jpg', shape:'circularImage',size:100},
+  {id: 1, modal: 'me', label: 'Matthew Hanley',x:0,y:0,fixed:true,mass:5, image: 'img/matt.jpg', shape:'circularImage',size:100},
   {id: 2, modal: 'cu', image: 'img/cu-logo.png', shape: 'image',size:80,mass:5},
   {id: 3, modal: 'lasp', image: 'img/lasp-logo.png', shape: 'image',size:40},
   {id: 4, image: 'img/robotics-logo.png', shape: 'circularImage',size:50},
@@ -29,6 +29,11 @@ var nodes = new vis.DataSet([
   {id: 39, modal: 'popsicle', label: 'Popsicle Sticks', shape: 'icon', icon:{face: '"Font Awesome 5 Free"', code:'\uf128', size: 50, color:'#000000'}},
   {id: 40, modal: 'web', label: 'Web Development', shape: 'icon', icon:{face: '"Font Awesome 5 Free"', code:'\uf1c9', size: 50, color:'#000000'}},
   {id: 63, modal: 'redbull', label: 'SlopeSoakers', shape: 'image', image: 'img/slopesoakers.png', size:40},
+  {id: 64, modal: 'home', label: 'Upbringing', shape: 'icon', icon:{face: '"Font Awesome 5 Free"', code:'\uf015', size: 50, color:'#000000'}},
+  {id: 65, modal: 'ruths', label: 'Ruth Ann', shape: 'icon', icon:{face: '"Font Awesome 5 Free"', code:'\uf2e5', size: 50, color:'#000000'}},
+  {id: 66, modal: 'whippi', label: 'Whippi-Dip', shape: 'icon', icon:{face: '"Font Awesome 5 Free"', code:'\uf2e7', size: 50, color:'#000000'}},
+  {id: 67, modal: 'alpaca', label: 'Farm', shape: 'icon', icon:{face: '"Font Awesome 5 Free"', code:'\uf6f0', size: 50, color:'#000000'}},
+  {id: 68, modal: 'lawns', label: 'Lawn Care', shape: 'icon', icon:{face: '"Font Awesome 5 Free"', code:'\uf06c', size: 50, color:'#000000'}},
 
 // hobbies
   {id: 32, modal: 'hobbies', label: 'Hobbies'},
@@ -41,17 +46,17 @@ var nodes = new vis.DataSet([
 
 
 //  SKILLS
-  {id: 22, image: 'img/ros.png', shape: 'image', size:75, shadow:{size:10}},
-  {id: 23, image: 'img/solidworks.png', shape: 'image'},
-  {id: 26, image: 'img/opencv.png', shape: 'image', size:50},
-  {id: 27, image: 'img/cuda.jpg', shape: 'image', size:50},
+  {id: 22, modal: 'ros', image: 'img/ros.png', shape: 'image', size:75, shadow:{size:10}},
+  {id: 23, modal: 'solidworks', image: 'img/solidworks.png', shape: 'image'},
+  {id: 26, modal: 'opencv', image: 'img/opencv.png', shape: 'image', size:50},
+  {id: 27, modal: 'cuda', image: 'img/cuda.jpg', shape: 'image', size:50},
   {id: 29, modal: 'deeplearning', label: 'Deep Learning for Computer Vision'},
   {id: 30, modal: 'accelcomp', label: 'Accelerated Computing with CUDA C/C++'},
-  {id: 57, label: 'Engineering Equation Solver (EES)'},
-  {id: 58, label: 'Python', image: 'img/python.png', shape: 'image', size: 40},
-  {id: 59, label: 'C/C++', image: 'img/c.png', shape: 'image', size: 40},
-  {id: 60, label: 'Matlab/Simulink', image: 'img/matlab.png', shape: 'image', size: 50},
-  {id: 61, label: 'Databases', image: 'img/db.png', shape: 'image', size: 30},
+  {id: 57, modal: 'ees', label: 'Engineering Equation Solver (EES)'},
+  {id: 58, modal: 'python', label: 'Python', image: 'img/python.png', shape: 'image', size: 40},
+  {id: 59, modal: 'c', label: 'C/C++', image: 'img/c.png', shape: 'image', size: 40},
+  {id: 60, modal: 'matlab', label: 'Matlab/Simulink', image: 'img/matlab.png', shape: 'image', size: 50},
+  {id: 61, modal: 'db', label: 'Databases', image: 'img/db.png', shape: 'image', size: 30},
 
 // coursework
   {id: 56, modal: 'courses', label: 'Coursework', shape: 'icon', icon:{face: '"Font Awesome 5 Free"', code:'\uf02d', size: 50, color:'#000000'}},
@@ -79,6 +84,14 @@ var edges = new vis.DataSet([
   {from: 1, to: 32},
   {from: 1, to: 31},
   {from: 1, to: 56},
+  {from: 1, to: 64},
+
+  // home to x
+  {from: 64, to: 65},
+  {from: 64, to: 66},
+  {from: 64, to: 67},
+  {from: 64, to: 68},
+
 
   // cu boulder to x
   {from: 2, to: 4},
@@ -291,6 +304,12 @@ var options2 = {
 // initialize your network!
 var network = new vis.Network(container, data, options);
 network.redraw();
+network.on("hoverNode", function (params) {
+  network.canvas.body.container.style.cursor = 'pointer'
+});
+network.on("blurNode", function (params) {
+  network.canvas.body.container.style.cursor = 'default'
+});
 network.on( 'click', function(properties) {
   var ids = properties.nodes;
   var clickedNodes = nodes.get(ids);

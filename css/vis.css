@@ -677,7 +677,7 @@ div.vis-network div.vis-navigation div.vis-button {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    z-index: 1000;
+    z-index: 980;
 }
 
 div.vis-network div.vis-navigation div.vis-button:hover {
