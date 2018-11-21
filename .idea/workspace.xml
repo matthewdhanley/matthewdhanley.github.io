@@ -2,34 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3dc385a-06a9-4486-8e29-319cb81cce5e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/css/img/network/acceptDeleteIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/img/network/addNodeIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/img/network/backIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/img/network/connectIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/img/network/cross.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/img/network/cross2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/img/network/deleteIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/img/network/downArrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/img/network/editIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/img/network/leftArrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/img/network/minus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/img/network/plus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/img/network/rightArrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/img/network/upArrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/img/network/zoomExtends.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/apple-touch-icon.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/crossdomain.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/vis.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/vis.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/matt.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/matt.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/network.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/network.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/vis.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/vis.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modals.html" beforeDir="false" afterPath="$PROJECT_DIR$/modals.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/_about.scss" beforeDir="false" />
@@ -1557,11 +1534,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modals.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="1180" column="57" lean-forward="true" selection-start-line="1180" selection-start-column="57" selection-end-line="1180" selection-end-column="57" />
+            <state relative-caret-position="453">
+              <caret line="1192" column="40" selection-start-line="1192" selection-start-column="40" selection-end-line="1192" selection-end-column="40" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#14;n#!!top" expanded="true" />
                 <element signature="e#50538#50545#1" expanded="true" />
@@ -1588,7 +1565,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
@@ -1746,12 +1723,12 @@
       <option name="presentableId" value="Default" />
       <updated>1542517157557</updated>
       <workItem from="1542517158858" duration="13432000" />
-      <workItem from="1542819449996" duration="12237000" />
+      <workItem from="1542819449996" duration="12898000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25669000" />
+    <option name="totallyTimeSpent" value="26330000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -1807,13 +1784,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="45" column="16" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/network.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="640">
@@ -1837,12 +1807,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/modals.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="1180" column="57" lean-forward="true" selection-start-line="1180" selection-start-column="57" selection-end-line="1180" selection-end-column="57" />
+        <state relative-caret-position="453">
+          <caret line="1192" column="40" selection-start-line="1192" selection-start-column="40" selection-end-line="1192" selection-end-column="40" />
           <folding>
             <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#14;n#!!top" expanded="true" />
             <element signature="e#50538#50545#1" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="45" column="16" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
         </state>
       </provider>
     </entry>
