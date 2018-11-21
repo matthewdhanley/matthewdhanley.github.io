@@ -256,7 +256,9 @@ var options = {
     selectionWidth: 5,
   },
   interaction: {
-    hover: true
+    hover: true,
+    navigationButtons: true,
+    keyboard: true
   },
   physics: {
     forceAtlas2Based: {
@@ -320,6 +322,3 @@ network.on( 'click', function(properties) {
     }
   }});
 
-function edges_fn(values, id, selected, hovering){
-  values.width = 5;
-}

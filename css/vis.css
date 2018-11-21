@@ -665,6 +665,7 @@ div.vis-network div.vis-navigation div.vis-button {
     height:34px;
     -moz-border-radius: 17px;
     border-radius: 17px;
+    color: white;
     position:absolute;
     display:inline-block;
     background-position: 2px 2px;
@@ -676,51 +677,110 @@ div.vis-network div.vis-navigation div.vis-button {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    z-index: 1000;
 }
 
 div.vis-network div.vis-navigation div.vis-button:hover {
-    box-shadow: 0 0 3px 3px rgba(56, 207, 21, 0.30);
+  color: #000000;
 }
 
 div.vis-network div.vis-navigation div.vis-button:active {
-    box-shadow: 0 0 1px 3px rgba(56, 207, 21, 0.95);
+    /*box-shadow: 0 0 1px 3px rgba(29, 203, 207, 0.95);*/
+    text-shadow: 0 0 7px rgba(29, 203, 207, 0.95);
 }
 
 div.vis-network div.vis-navigation div.vis-button.vis-up {
-    background-image: url("img/network/upArrow.png");
     bottom:50px;
     left:55px;
 }
+
+div.vis-network div.vis-navigation div.vis-button.vis-up:before {
+  content: "\f062";  /* this is your text. You can also use UTF-8 character codes as I do here */
+  font-family: "Font Awesome 5 Free";
+  position: relative;
+  top: 6px;
+  right:-9px;
+}
+
 div.vis-network div.vis-navigation div.vis-button.vis-down {
-    background-image: url("img/network/downArrow.png");
     bottom:10px;
     left:55px;
 }
+
+div.vis-network div.vis-navigation div.vis-button.vis-down:before {
+  content: "\f063";  /* this is your text. You can also use UTF-8 character codes as I do here */
+  font-family: "Font Awesome 5 Free";
+  position: relative;
+  top: 6px;
+  right:-9px;
+}
+
 div.vis-network div.vis-navigation div.vis-button.vis-left {
-    background-image: url("img/network/leftArrow.png");
-    bottom:10px;
-    left:15px;
+    bottom:30px;
+    left:35px;
 }
+
+div.vis-network div.vis-navigation div.vis-button.vis-left:before {
+  content: "\f060";  /* this is your text. You can also use UTF-8 character codes as I do here */
+  font-family: "Font Awesome 5 Free";
+  position: relative;
+  top: 6px;
+  right:-9px;
+}
+
 div.vis-network div.vis-navigation div.vis-button.vis-right {
-    background-image: url("img/network/rightArrow.png");
-    bottom:10px;
-    left:95px;
+    bottom:30px;
+    left:75px;
 }
+
+div.vis-network div.vis-navigation div.vis-button.vis-right:before {
+  content: "\f061";  /* this is your text. You can also use UTF-8 character codes as I do here */
+  font-family: "Font Awesome 5 Free";
+  position: relative;
+  top: 6px;
+  right:-9px;
+}
+
 div.vis-network div.vis-navigation div.vis-button.vis-zoomIn {
-    background-image: url("img/network/plus.png");
-    bottom:10px;
-    right:15px;
+  bottom:45px;
+  left:7px;
 }
+
+div.vis-network div.vis-navigation div.vis-button.vis-zoomIn:before {
+  /*background-image: url("img/network/plus.png");*/
+  content: "\f00e";  /* this is your text. You can also use UTF-8 character codes as I do here */
+  font-family: "Font Awesome 5 Free";
+  position: relative;
+  top: 6px;
+  right:-9px;
+}
+
 div.vis-network div.vis-navigation div.vis-button.vis-zoomOut {
-    background-image: url("img/network/minus.png");
-    bottom:10px;
-    right:55px;
+    bottom:15px;
+    left:7px;
 }
+
+div.vis-network div.vis-navigation div.vis-button.vis-zoomOut:before {
+  content: "\f010";  /* this is your text. You can also use UTF-8 character codes as I do here */
+  font-family: "Font Awesome 5 Free";
+  position: relative;
+  top: 6px;
+  right:-9px;
+}
+
 div.vis-network div.vis-navigation div.vis-button.vis-zoomExtends {
-    background-image: url("img/network/zoomExtends.png");
-    bottom:50px;
-    right:15px;
+    bottom:30px;
+    left:55px;
 }
+
+div.vis-network div.vis-navigation div.vis-button.vis-zoomExtends:before {
+  content: "\f065";  /* this is your text. You can also use UTF-8 character codes as I do here */
+  font-family: "Font Awesome 5 Free";
+  position: relative;
+  top: 6px;
+  right:-9px;
+}
+
 .vis-timeline {
   /*
   -webkit-transition: height .4s ease-in-out;

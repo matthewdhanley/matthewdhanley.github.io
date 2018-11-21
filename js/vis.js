@@ -54505,6 +54505,7 @@ var NavigationHandler = function () {
 
       this.navigationDOM = {};
       var navigationDivs = ['up', 'down', 'left', 'right', 'zoomIn', 'zoomOut', 'zoomExtends'];
+      var navigationDivsTitles = ['Pan Up', 'Pan Down', 'Pan Left', 'Pan Right', 'Zoom In', 'Zoom Out', 'Fit to Screen'];
       var navigationDivActions = ['_moveUp', '_moveDown', '_moveLeft', '_moveRight', '_zoomIn', '_zoomOut', '_fit'];
 
       this.navigationDOM['wrapper'] = document.createElement('div');
@@ -54514,6 +54515,7 @@ var NavigationHandler = function () {
       for (var i = 0; i < navigationDivs.length; i++) {
         this.navigationDOM[navigationDivs[i]] = document.createElement('div');
         this.navigationDOM[navigationDivs[i]].className = 'vis-button vis-' + navigationDivs[i];
+        this.navigationDOM[navigationDivs[i]].title = navigationDivsTitles[i];
         this.navigationDOM['wrapper'].appendChild(this.navigationDOM[navigationDivs[i]]);
 
         var hammer = new Hammer(this.navigationDOM[navigationDivs[i]]);
