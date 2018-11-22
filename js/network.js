@@ -339,7 +339,7 @@ network.on( 'click', function(properties) {
   if (typeof modal !== 'undefined') {
     try {
       console.log('#'+clickedNodes[0].modal);
-      $('#'+clickedNodes[0].modal).toggle();
+      $('#'+clickedNodes[0].modal).toggle(true);
       ga('send', {
         hitType: 'event',
         eventCategory: 'Node',
@@ -353,7 +353,7 @@ network.on( 'click', function(properties) {
     }
     // var span = modal.getElementsByClassName("close")[0];
     $('#'+clickedNodes[0].modal).find("span").click(function () {
-      $('#'+clickedNodes[0].modal).toggle();
+      $('#'+clickedNodes[0].modal).toggle(false);
     });
 
     // // When the user clicks on <span> (x), close the modal
@@ -384,9 +384,9 @@ network.on( 'click', function(properties) {
     window.onclick = function (event) {
       let mobile = isMobile.any();
       if (event.target === modal && !mobile) {
-        $('#'+clickedNodes[0].modal).toggle();
+        $('#'+clickedNodes[0].modal).toggle(false);
       }
     }
-    
+
   }});
 
