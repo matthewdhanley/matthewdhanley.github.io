@@ -338,7 +338,8 @@ network.on( 'click', function(properties) {
   }
   if (typeof modal !== 'undefined') {
     try {
-      modal.style.display = "block";
+      console.log('#'+clickedNodes[0].modal);
+      $('#'+clickedNodes[0].modal).toggle();
       ga('send', {
         hitType: 'event',
         eventCategory: 'Node',
@@ -347,19 +348,45 @@ network.on( 'click', function(properties) {
       });
     }
     catch(err){
+      // alert("ERROR!");
       return;
     }
-    var span = modal.getElementsByClassName("close")[0];
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-      modal.style.display = "none";
-    };
+    // var span = modal.getElementsByClassName("close")[0];
+    $('#'+clickedNodes[0].modal).find("span").click(function () {
+      $('#'+clickedNodes[0].modal).toggle();
+    });
 
+    // // When the user clicks on <span> (x), close the modal
+    // span.onclick = function () {
+    //   modal.style.display = "none";
+    // };
+    var isMobile = {
+      Android: function() {
+        return navigator.userAgent.match(/Android/i);
+      },
+      BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+      },
+      iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+      },
+      Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+      },
+      Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i);
+      },
+      any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+      }
+    };
 // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
+      let mobile = isMobile.any();
+      if (event.target === modal && !mobile) {
+        $('#'+clickedNodes[0].modal).toggle();
       }
     }
+    
   }});
 
