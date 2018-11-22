@@ -303,13 +303,29 @@ var options2 = {
 
 // initialize your network!
 var network = new vis.Network(container, data, options);
+var networkCanvas = document.getElementById("mynetwork").getElementsByTagName("canvas")[0]
 network.redraw();
-network.on("hoverNode", function (params) {
-  network.canvas.body.container.style.cursor = 'pointer'
+
+
+function changeCursor(newCursorStyle){
+  networkCanvas.style.cursor = newCursorStyle;
+}
+
+network.on('dragging', function () {
+  changeCursor('grabbing');
 });
-network.on("blurNode", function (params) {
-  network.canvas.body.container.style.cursor = 'default'
+network.on('hoverNode', function () {
+  changeCursor('pointer');
 });
+
+network.on('blurNode', function () {
+  changeCursor('grab');
+});
+
+network.on('dragEnd', function () {
+  changeCursor('grab');
+});
+
 network.on( 'click', function(properties) {
   var ids = properties.nodes;
   var clickedNodes = nodes.get(ids);
