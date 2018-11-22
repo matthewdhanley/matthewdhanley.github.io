@@ -3,7 +3,7 @@ var nodes = new vis.DataSet([
   {id: 1, modal: 'me', label: 'Matthew Hanley',x:0,y:0,fixed:true,mass:5, image: 'img/matt.jpg', shape:'circularImage',size:100},
   {id: 2, modal: 'cu', image: 'img/cu-logo.png', shape: 'image',size:80,mass:5},
   {id: 3, modal: 'lasp', image: 'img/lasp-logo.png', shape: 'image',size:40},
-  {id: 4, image: 'img/robotics-logo.png', shape: 'circularImage',size:50},
+  {id: 4, modal: 'robotics', image: 'img/robotics-logo.png', shape: 'circularImage',size:50},
   {id: 5, modal:'sim-science', label: 'SIM Science', shape: 'icon', icon:{face: '"Font Awesome 5 Free"', code:'\uf1c0', size: 50, color:'#000000'}},
   {id: 6, modal: 'qs-wheels', label: 'QuikSCAT Reaction Wheels'},
   {id: 7, modal:'aim-shadow', label: 'AIM Lunar Shadow Prediction Tool', shape: 'icon', icon:{face: '"Font Awesome 5 Free"', code:'\uf185', size: 50, color:'#000000'}},
