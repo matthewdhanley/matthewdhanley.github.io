@@ -1,3 +1,8 @@
+// logical variable assignment
+ME   = 1;
+CU   = 2;
+LASP = 3;
+
 // create an array with nodes
 var nodes = new vis.DataSet([
   {id: 1, modal: 'me', label: 'Matthew Hanley',x:0,y:0,fixed:true,mass:5, image: 'img/matt.jpg', shape:'circularImage',size:100},
@@ -34,6 +39,10 @@ var nodes = new vis.DataSet([
   {id: 66, modal: 'whippi', label: 'Whippi-Dip', shape: 'icon', icon:{face: '"Font Awesome 5 Free"', code:'\uf2e7', size: 50, color:'#000000'}},
   {id: 67, modal: 'alpaca', label: 'Farm', shape: 'icon', icon:{face: '"Font Awesome 5 Free"', code:'\uf6f0', size: 50, color:'#000000'}},
   {id: 68, modal: 'lawns', label: 'Lawn Care', shape: 'icon', icon:{face: '"Font Awesome 5 Free"', code:'\uf06c', size: 50, color:'#000000'}},
+  {id: 69, modal: 'rocketlab', shape: 'image', image: 'img/rocketlab.png', size:50},
+  {id: 71, modal: 'hitl', label: 'HITL'},
+  {id: 72, modal: 'sdr', label: 'SDR', shape: 'icon', icon:{face: '"Font Awesome 5 Free"', code:'\uf7c0', size: 50, color:'#000000'}},
+
 
 // hobbies
   {id: 32, modal: 'hobbies', label: 'Hobbies'},
@@ -73,6 +82,10 @@ var nodes = new vis.DataSet([
   {id: 53, modal: 'software-dev', label: 'Software Development'},
   {id: 54, modal: 'data-mining', label: 'Data Mining'},
   {id: 55, modal: 'feedback', label: 'Feedback Control'},
+
+// projects
+  {id: 70, modal: 'eps-sim', label: 'EPS Simulation'},
+
 
 ]);
 
@@ -211,6 +224,7 @@ var edges = new vis.DataSet([
   {from: 58, to: 29},
   {from: 58, to: 22},
   {from: 58, to: 27},
+  {from: 58, to: 70}, // to eps-sim
 
   // databases
   {from: 61, to: 5},
@@ -232,6 +246,12 @@ var edges = new vis.DataSet([
   {from: 60, to: 51},
   {from: 60, to: 52},
   {from: 60, to: 55},
+
+  // rocketlab
+  {from: 69, to: 70}, // to eps-sim
+  {from: 69, to: 71}, // to hitl
+  {from: 69, to: 71}, // to sdr
+  {from: 70, to: 71}, // hitl to sdr
 
 
 ]);
