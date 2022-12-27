@@ -170,10 +170,7 @@
       <h2>Databases</h2>
     </div>
     <div class="modal-body">
-      <p>I think that I am weird with my affinity for databases. It is incredibly satisfying for me to run a script
-      then to execute a SQL query to get loads of data. I have used mainly SQL relational databases to store telemetry,
-      science experiment results, Home Depot products scraped from the web, website data, and more. I have self educated
-      myself with database design and am interested in storing large amounts of data quickly.</p>
+      <p>I have worked with both SQL and NoSQL databases</p>
     </div>
   </div>
 </div>
@@ -944,13 +941,10 @@
     </div>
     <div class="modal-body">
       <p class="text-white">
-        After my independent study with Dr. Ruben, we decided to take on a Master's thesis. I personally decided to do the
-        thesis since LASP was going to be sponsoring me through graduate school. Currently in progress, I am investigating
-        in depth the performance of different GPUs as well as the effects of multiple different optimization techniques
-        on those GPUs. My end goal is to be able to accelerate live computer vision to the point where I can implement
-        a biological cell tracking software that can label and track parent cells as they split into new cells. Eventually,
-        I would like to implement deep learning to try to find any visual features that can determine if the cells are resistant
-        to antibiotics before the drugs are introduced to the culture.
+        Abstract: Computers are becoming more vital in nearly all aspects of engineering. As algorithms become more complex and data volume increases, engineers and scientists alike must work with programs that require more and more CPU hours to perform the needed computations. These professionals typically have other analysis and research that could be done, but instead are stuck waiting for computers to perform computations. This problem is frequently combatted by paying for time on massive computer clusters or hiring computer scientists to optimize computations. But what if it were more feasible for engineers and scientists to write parallel programs that could run on the GPUs already present on their desktops? This thesis intends to provide the tools necessary for someone without an extensive background in computer science to write code that can be implemented on NVIDIA GPUs. These tools include: 1) fundamental concepts needed to understand the parallel programming model, 2) equations to guide programmers to make educated decisions when parallelizing programs, 3) suggestions on where programmers should focus attention to get the most benefit from the GPU, and 4) a discrete method to get a program from concept to running on a GPU. The goal is to empower professionals, students, and enthusiasts in the STEM community to both recognize when a program can be parallelized and to have the understanding of how to parallelize a program. In order to prove the effectiveness of the concepts presented in this thesis, the process and tools are used to parallelize a Monte-Carlo simulation as well as a Lagrangian fluid parcel tracking algorithm such that it is more feasible to run on a personal computer.
+      </p>
+      <p class="text-white">
+        <a target="_blank" href="https://scholar.colorado.edu/concern/graduate_thesis_or_dissertations/xw42n884c">Tools and Techniques for Improving Computational Efficiency on GPUs for Engineers</a>
       </p>
     </div>
   </div>
@@ -1211,6 +1205,39 @@
   </div>
 </div>
 
+<div id="mechatronics" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Mechatronics</h2>
+    </div>
+    <div class="modal-body">
+      <p class="text-white">
+        With a team of four engineers, I created a autonomous robot that would navigate across a model factory floor, extract a pallet from a shelving unit, and
+        return it to a pickup location. 
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="deep-learning" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Deep Learning</h2>
+    </div>
+    <div class="modal-body">
+      <p class="text-white">
+        In this course, we built neural networks from scratch in Python, implementing concepts such as backpropegation, feed forward, and different types
+        of neurons.
+
+        <a target="_blank" href="https://github.com/matthewdhanley/csci5922">Final Project</a>
+      </p>
+    </div>
+  </div>
+</div>
 
 <div id="beer" class="modal">
   <!-- Modal content -->
@@ -1282,7 +1309,7 @@
   <div class="modal-content">
     <div class="modal-header">
       <span class="close">&times;</span>
-      <h2>Boulder Canyon</h2>
+      <h2>Kitesurfing on Lake Michigan</h2>
     </div>
     <div class="modal-body">
       <img src="img/kite.png"/>
@@ -1336,6 +1363,97 @@
 
         The HITL team also was responsible for delivering flatsats for all programs. A flatsat is a full suite of sensors, actuators, and
         avionics. A flatsat was built early in the program and was required to survive for the duration of the operational mission.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="ebn0-em" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Eb/N0 Emulation</h2>
+    </div>
+    <div class="modal-body">
+      <p class="text-white">Created a 2U rack mounted piece of EGSE that allowed for emulation of a lossy RF link between a spacecraft and ground station. This emulator
+        allowed the injection of a variable noise signal to the uplink signal, attenuation of uplink signal, and attenuation of the downlink signal. This allows
+        the user to emulate losses and addition of noise. </p>
+      <p class="text-white">
+        Combining this system with the 6-DoF hardware in the loop infrastructure, we are able to emulate ground contacts by incorporating ground stations, 
+        antenna patterns, and link models into the simulation software.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="gps-em" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>GPS Emulation</h2>
+    </div>
+    <div class="modal-body">
+      <p>I have done GPS emulation from something as fast and cheap as using a USRP with open-source emulation software, to bringing up and using a brand new
+        Spirent GPS Emulator.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="data-budget" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Lunar Mission Data Budget</h2>
+    </div>
+    <div class="modal-body">
+      <p class="text-white">Creating a data budget for a Lunar Mission is a hard problem. For the CAPSTONE / Lunar Photon mission, it was exacerbated by the fact that the mission
+        used increasingly large phasing loops in order to efficiently place the spacecraft on a TLI trajectory. Because of this, a data budeget had to be created
+        for each of the 8 phasing loops. During the lower phasing loops, the link was stronger and the data budget easily closed. On the later phasing loops, the
+        data rate dropped off sharply, requiring me to be very selective about what data can be prioritized for downlink.
+</p><p class="text-white">
+        I successfully created a tool that allowed me to iterate with subsystem owners over required data for their respecitve subsystems. The main interface with the
+        user was a simple Excel spreadsheet. This allowed non-software-savvy to easily update their requirements and see the effect on the margins instantly. I 
+        created a utility which allowed me then parse the Excel sheet and turn it into MAX FSW configuration files. Using the data budget as the source of truth 
+        for the mission configuration gave us confidence that what was implemented in software matched exactly what the calculations in the data budget showed.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="eps-sim" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>EPS Simulator</h2>
+    </div>
+    <div class="modal-body">
+      <p class="text-white">For the Lunar Photon mission, the EPS system had to be properly sized to support running high power fuel and oxidizer pumps for varying durations. Because
+        mass is constrained heavily on any lunar mission, I created a high fidelity EPS simulator to predict minimum bus current based on orbit, burn duration, 
+        time between burns, and battery performance. Using various numerical computation methods in Python, I was able to map derive expected bus voltage at
+        all points during the mission given time, power draw, and current battery capacity. 
+      </p><p class="text-white">
+        This tool resulted in a change of battery cell type in order to provide higher capacity and prevent an undervoltage condition which could arise in the event
+        the spacecraft did not achieve sun pointing after its longest burn. 
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="spenvis" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Radiation Analysis</h2>
+    </div>
+    <div class="modal-body">
+      <p class="text-white">I have used <a target="_blank" href="https://www.spenvis.oma.be/models.php">SPENVIS</a> to analyize the radiation enviornment
+        of many different spacecraft, both for proposals as well as operational missions.
       </p>
     </div>
   </div>

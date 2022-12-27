@@ -1,11 +1,8 @@
-// logical variable assignment
-ME   = 1;
-CU   = 2;
-LASP = 3;
+// todo - Don't hardcode IDs, hard to read. Use variables instead.
 
 // create an array with nodes
 var nodes = new vis.DataSet([
-  {id: 1, modal: 'me', label: 'Matthew Hanley',x:0,y:0,fixed:true,mass:5, image: 'img/matt.jpg', shape:'circularImage',size:100},
+  {id: 1, modal: 'me', label: 'Matthew Hanley',x:0,y:0,fixed:true,mass:5, image: 'img/mattv2.jpeg', shape:'circularImage',size:100},
   {id: 2, modal: 'cu', image: 'img/cu-logo.png', shape: 'image',size:80,mass:5},
   {id: 3, modal: 'lasp', image: 'img/lasp-logo.png', shape: 'image',size:40},
   {id: 4, modal: 'robotics', image: 'img/robotics-logo.png', shape: 'circularImage',size:50},
@@ -42,6 +39,10 @@ var nodes = new vis.DataSet([
   {id: 69, modal: 'rocketlab', shape: 'image', image: 'img/rocketlab.png', size:50},
   {id: 71, modal: 'hitl', label: 'HITL'},
   {id: 72, modal: 'sdr', label: 'SDR', shape: 'icon', icon:{face: '"Font Awesome 5 Free"', code:'\uf7c0', size: 50, color:'#000000'}},
+  {id: 73, modal: 'ebn0-em', label: 'Eb/N0 Emulation'},
+  {id: 74, modal: 'gps-em', label: 'GPS Emulation', shape: 'icon', icon:{face: '"Font Awesome 5 Free"', code:'\uf0ac', size: 50, color:'#000000'}},
+  {id: 77, modal: 'data-budget', label: 'Lunar Data Budget'},
+
 
 
 // hobbies
@@ -66,6 +67,14 @@ var nodes = new vis.DataSet([
   {id: 59, modal: 'c', label: 'C/C++', image: 'img/c.png', shape: 'image', size: 40},
   {id: 60, modal: 'matlab', label: 'Matlab/Simulink', image: 'img/matlab.png', shape: 'image', size: 50},
   {id: 61, modal: 'db', label: 'Databases', image: 'img/db.png', shape: 'image', size: 30},
+  {id: 75, modal: 'teamcity', shape: 'image', label: 'CI/CD', image: 'img/teamcity.png', size:50},
+  {id: 76, modal: 'systems',  label: 'Systems Engineering'},
+  {id: 80, modal: 'ait',  label: 'AI&T'},
+  {id: 81, modal: 'ee',  label: 'Electrical Engineering'},
+  {id: 82, modal: 'sops',  label: 'Spacecraft Operations'},
+  {id: 83, modal: 'sw',  label: 'Software Engineering'},
+
+
 
 // coursework
   {id: 56, modal: 'courses', label: 'Coursework', shape: 'icon', icon:{face: '"Font Awesome 5 Free"', code:'\uf02d', size: 50, color:'#000000'}},
@@ -82,9 +91,12 @@ var nodes = new vis.DataSet([
   {id: 53, modal: 'software-dev', label: 'Software Development'},
   {id: 54, modal: 'data-mining', label: 'Data Mining'},
   {id: 55, modal: 'feedback', label: 'Feedback Control'},
+  {id: 78, modal: 'mechatronics', label: 'Mechatronics'},
+  {id: 79, modal: 'deep-learning', label: 'Deep Learning'},
 
 // projects
   {id: 70, modal: 'eps-sim', label: 'EPS Simulation'},
+  {id: 84, modal: 'spenvis', label: 'SPENVIS'},
 
 
 ]);
@@ -98,6 +110,7 @@ var edges = new vis.DataSet([
   {from: 1, to: 31},
   {from: 1, to: 56},
   {from: 1, to: 64},
+  {from: 1, to: 69}, // me to rocketlab
 
   // home to x
   {from: 64, to: 65},
@@ -195,6 +208,8 @@ var edges = new vis.DataSet([
   {from: 56, to: 53},
   {from: 56, to: 54},
   {from: 56, to: 55},
+  {from: 56, to: 79},  // deep learning
+  {from: 56, to: 78},  // mechatronics
 
   // ees
   {from: 57, to: 46},
@@ -225,6 +240,9 @@ var edges = new vis.DataSet([
   {from: 58, to: 22},
   {from: 58, to: 27},
   {from: 58, to: 70}, // to eps-sim
+  {from: 58, to: 77}, // to data-budget
+  {from: 56, to: 79}, // deep learning
+  {from: 56, to: 78}, // mechatronics
 
   // databases
   {from: 61, to: 5},
@@ -247,12 +265,28 @@ var edges = new vis.DataSet([
   {from: 60, to: 52},
   {from: 60, to: 55},
 
-  // rocketlab
-  {from: 69, to: 70}, // to eps-sim
-  {from: 69, to: 71}, // to hitl
-  {from: 69, to: 71}, // to sdr
-  {from: 70, to: 71}, // hitl to sdr
+  // teamcity
+  {from: 71, to: 75}, // hitl to teamcity
 
+  // systems engineering
+  {from: 76, to: 70}, // systems to eps-sim
+  {from: 76, to: 77}, // systems to data budget
+  {from: 76, to: 84}, // systems to spenvis
+
+
+  // hitl
+  {from: 71, to: 72}, // hitl to sdr
+  {from: 71, to: 73}, // hitl to ebn0-em
+  {from: 71, to: 74}, // hitl to gps-em
+
+  // rocketlab
+  {from: 69, to: 76}, // to systems engineering
+  {from: 69, to: 71}, // to hitl
+  {from: 69, to: 80}, // to ait
+  {from: 69, to: 81}, // to electrical engineering
+  {from: 69, to: 82}, // to spacecraft operations
+  {from: 69, to: 83}, // to software engineering
+ 
 
 ]);
 
@@ -297,7 +331,7 @@ var options = {
     forceAtlas2Based: {
       gravitationalConstant: -75,
       centralGravity: 0.004,
-      springLength: 150,
+      springLength: 300,
       springConstant: 0.2
     },
 
